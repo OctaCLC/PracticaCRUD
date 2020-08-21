@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD</title>
+    <title>Lista de campeones de LoL</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Nombre del Campeon*</label><label class="validation-error hide" id="fullNameValidationError">Por favor ingresa el nombre del campeon.</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div>
+                        <label>Rol</label>
+                        <input type="text" name="rol" id="rol">
+                    </div>
+                    <div>
+                        <label>Faccion</label>
+                        <input type="text" name="fac" id="fac">
+                    </div>
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Guardar">
+                    </div>
+                </form>
+            </td>
 
+        </tr>
+        <td>
+            <table class="list" id="campeones">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Rol</th>
+                        <th>Faccion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <h1>Campeones de LoL</h1>
+                </tbody>
+            </table>
+        </td>
+    </table>
+    <script src="scripts/app.js"></script>
 </body>
 
 </html>
