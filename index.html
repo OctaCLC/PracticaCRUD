@@ -1,51 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="es-ES">
 
 <head>
-    <title>Lista de campeones de LoL</title>
+    <title>Lolcito UwU</title>
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/app.js"></script>
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td>
-                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-                    <div>
-                        <label>Nombre del Campeon*</label><label class="validation-error hide" id="fullNameValidationError">Por favor ingresa el nombre del campeon.</label>
-                        <input type="text" name="name" id="name">
-                    </div>
-                    <div>
-                        <label>Rol</label>
-                        <input type="text" name="rol" id="rol">
-                    </div>
-                    <div>
-                        <label>Faccion</label>
-                        <input type="text" name="fac" id="fac">
-                    </div>
-                    <div class="form-action-buttons">
-                        <input type="submit" value="Guardar">
-                    </div>
-                </form>
-            </td>
 
-        </tr>
-        <td>
-            <table class="list" id="campeones">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Rol</th>
-                        <th>Faccion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <h1>Campeones de LoL</h1>
-                </tbody>
-            </table>
-        </td>
-    </table>
-    <script src="scripts/app.js"></script>
-</body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
 
-</html>
+                <h1>Campeones de LoL y su raza</h1>
+
+                <table id="grid" class="table table-cam">
+                    <thead>
+                        <tr>
+                            <th>Campeon</th>
+                            <th>Raza</th>
+
+                        </tr>
+                        <tr>
+                            <th>
+                                <input id="campeon" type="text" class="form-control" />
+                            </th>
+                            <th>
+                                <input id="raza" type="text" class="form-control" />
+                            </th>
+                            <th>
+                                <button id="btn-agregar" class="btn btn-default">Agregar</button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
